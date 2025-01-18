@@ -7,15 +7,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 
 //using ECommerceShopingCartASPNET8.
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-{
-    options.LoginPath = "/Identity/Account/Login";
-    options.LogoutPath = "/Identity/Account/Logout";
-    
 
-    options.AccessDeniedPath = "/Identity/Account/AccessDenied";
-});
 builder.Services.AddAuthorization();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
